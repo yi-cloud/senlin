@@ -174,7 +174,7 @@ def ListenerProc(exchange, project_id, cluster_id, recover_action):
 
     if exchange == cfg.CONF.health_manager.nova_control_exchange:
         targets = [
-            messaging.Target(topic='versioned_notifications',
+            messaging.Target(topic='notifications',
                              exchange=exchange),
         ]
         endpoints = [
